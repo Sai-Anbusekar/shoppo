@@ -1,5 +1,5 @@
 //
-//  RegisterProtocol.swift
+//  RegisterModel.swift
 //  shoppo
 //
 //  Created by Anbu Sekar M on 21/05/25.
@@ -14,6 +14,7 @@ struct RegisterRequest: Codable {
 }
 
 struct RegisterResponse: Codable {
+    let statusCode: Int?
     let status: Bool
     let message: String
 }
