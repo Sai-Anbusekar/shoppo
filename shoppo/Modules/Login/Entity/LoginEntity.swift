@@ -15,5 +15,4 @@ struct LoginResponse: Codable {
     var accessToken: String?
     var refreshToken: String?
     var message: String
-    var status: Bool
 }

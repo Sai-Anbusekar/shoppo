@@ -50,6 +50,36 @@
             endingLineNumber = "36"
             landmarkName = "register(request:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "38B82C4B-5EC7-4BD0-B5C1-6225D84273A0 - 8f8b5b4505dfcf6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Alamofire.DataResponse&lt;shoppo.RegisterResponse, Alamofire.AFError&gt;) -&gt; () in shoppo.RegisterInteractor.register(request: shoppo.RegisterRequest) -&gt; ()"
+                  moduleName = "shoppo.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anbusekar.murugesan/Documents/xcode/shoppo/shoppo/Modules/RegisterUser/Interactor/RegisterInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36">
+               </Location>
+               <Location
+                  uuid = "38B82C4B-5EC7-4BD0-B5C1-6225D84273A0 - 8f8b5b4505dfcf6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Alamofire.DataResponse&lt;shoppo.RegisterResponse, Alamofire.AFError&gt;) -&gt; () in shoppo.RegisterInteractor.register(request: shoppo.RegisterRequest) -&gt; ()"
+                  moduleName = "shoppo.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anbusekar.murugesan/Documents/xcode/shoppo/shoppo/Modules/RegisterUser/Interactor/RegisterInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -161,6 +191,22 @@
             startingLineNumber = "41"
             endingLineNumber = "41"
             landmarkName = "showSuccess(message:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F9B64845-3536-4AB5-A19A-0947D8C8FAFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "shoppo/Modules/Login/Interactor/LoginInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "login(user:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

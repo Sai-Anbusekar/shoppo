@@ -19,9 +19,11 @@ class LoginInteractor: LoginInteractorProtocol {
         guard let url = URL(string: URLManager.login) else { return }
         
         let parameters: [String: Any] = [
-            "email": user.email,
+            "username": user.email,
             "password": user.password
         ]
+        
+      
         
         AF.request(url,
                    method: .post,
