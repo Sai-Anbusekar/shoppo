@@ -122,7 +122,7 @@ struct RegisterForegroundView: View {
                 } .padding(.horizontal, 30)
                     .padding(.top, 30)
                 Button(action: {
-                    // Navigate or perform action
+                    viewModel.coordinator?.currentRoute = .home
                 }) {
                     Text("Cancel")
                         .foregroundColor(.gray)
