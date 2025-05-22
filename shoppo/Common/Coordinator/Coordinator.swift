@@ -14,6 +14,7 @@ enum AppRoute {
     case register
     case home
     case login
+    case user
     // Add more screens here
 }
 
@@ -32,6 +33,8 @@ final class AppCoordinator: ObservableObject {
             RegisterRouter.createModule(coordinator: self)
         case .login:
             LoginRouter.createModule(coordinator: self)
+        case .user:
+            Text("User Logged In")
         }
     }
 

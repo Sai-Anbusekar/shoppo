@@ -36,13 +36,7 @@ final class LoginViewModel: ObservableObject, LoginViewProtocol {
     }
     
     func showSuccess(message: String) {
-        DispatchQueue.main.async {
-            self.message = message
-            self.alertTitle = "Success!"
-            self.showAlert = true
-        }
-       
-        
+        coordinator?.navigate(to: .user)
     }
     
     func showError(error: String) {
