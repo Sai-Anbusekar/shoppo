@@ -49,7 +49,7 @@ struct HomeView: View {
                 
                 
                 Button(action: {
-                    // Navigate to login
+                    viewModel.coordinator?.navigate(to: .login)
                 }) {
                     Image(systemName: "arrow.right")
                         .foregroundColor(.white)

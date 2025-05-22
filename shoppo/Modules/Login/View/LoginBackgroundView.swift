@@ -16,6 +16,11 @@ struct LoginBackgroundView: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding(.bottom, 200)
             
+            Image("background4")
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .frame(maxHeight: .infinity, alignment: .bottom)
+           
+            
         }
         .edgesIgnoringSafeArea(.all)
     }

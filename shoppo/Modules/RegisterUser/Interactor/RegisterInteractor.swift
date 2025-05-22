@@ -29,7 +29,7 @@ class RegisterInteractor: RegisterInteractorProtocol {
                    method: .post,
                    parameters: parameters,
                    encoding: JSONEncoding.default,
-                   headers: ["Content-Type": "application/json"])
+                   headers: HttpsHeader.withOutAccessToken)
         .validate(statusCode: 200..<500)  // Accept 400 to capture JSON response
         .responseDecodable(of: RegisterResponse.self) { response in
             switch response.result {

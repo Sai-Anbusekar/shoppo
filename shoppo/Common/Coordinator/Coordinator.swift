@@ -13,7 +13,7 @@ import Combine
 enum AppRoute {
     case register
     case home
-    case profile
+    case login
     // Add more screens here
 }
 
@@ -30,8 +30,8 @@ final class AppCoordinator: ObservableObject {
             HomeRouter.createModule(coordinator: self)
         case .register:
             RegisterRouter.createModule(coordinator: self)
-        case .profile:
-            Text("Profile Screen") // Placeholder
+        case .login:
+            LoginRouter.createModule(coordinator: self)
         }
     }
 
