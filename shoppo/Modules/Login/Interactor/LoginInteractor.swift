@@ -34,7 +34,11 @@ class LoginInteractor: LoginInteractorProtocol {
         .responseDecodable(of: LoginResponse.self) { response in
             switch response.result {
             case .success(let value):
-                self.output?.didLoginSuccess(response: value)
+                if value.status {
+                    self.output?.didLoginSuccess(response: value)
+                } else {
+                    self.output?.didLoginFailure(error: value.message)
+                }
             case .failure(let error):
                 self.output?.didLoginFailure(error: error.localizedDescription)
             }

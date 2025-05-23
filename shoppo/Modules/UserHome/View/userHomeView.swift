@@ -28,7 +28,12 @@ struct userHomeViewModel: View {
                     .padding(.bottom, 25)
                 NewItemsView()
                     .padding(.bottom, 25)
+                TopProductView()
+                    .padding(.bottom, 25)
+                CategoriesView()
+                    
             }
+            
           
             BottomView()
                 .frame(height: 20)

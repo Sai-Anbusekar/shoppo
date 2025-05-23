@@ -34,7 +34,7 @@ final class AppCoordinator: ObservableObject {
         case .login:
             LoginRouter.createModule(coordinator: self)
         case .user:
-            Text("User Logged In")
+            HomeScreenRouter.createModule(coordinator: self)
         }
     }
 

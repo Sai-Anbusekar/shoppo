@@ -11,12 +11,12 @@ struct LoginView: View {
     
     var body: some View {
         ZStack {
-            
             LoginBackgroundView()
             LoginFrontView(viewModel: viewModel)
             if viewModel.showAlert {
                 CustomAlertView(title: viewModel.alertTitle, message: viewModel.message) {
                     viewModel.showAlert = false
+                    
                 }
             }
         }
