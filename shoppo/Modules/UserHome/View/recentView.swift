@@ -27,6 +27,7 @@ struct recentView: View {
             }
             
         }
+        .padding(.horizontal, 20)
         
     }
 }
@@ -45,7 +46,7 @@ struct circlePreview: View {
             Circle()
                 .fill(Color.white)
                 .frame(width: 60, height: 60)
-                .shadow(color: .gray.opacity(0.6), radius: 10, x: 0, y: 5)
+                .shadow(color: .gray.opacity(0.6), radius: 7, x: 0, y: 5)
             
                 image
                 .clipShape(.circle)

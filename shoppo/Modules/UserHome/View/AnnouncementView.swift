@@ -31,6 +31,7 @@ struct AnnouncementView: View {
         .background(Color.gray.opacity(0.1))
         .frame(maxWidth: .infinity, alignment: .leading)
         .cornerRadius(25)
+        .padding(.horizontal, 20)
         
     }
     
