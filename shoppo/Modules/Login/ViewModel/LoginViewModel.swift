@@ -36,10 +36,12 @@ final class LoginViewModel: ObservableObject, LoginViewProtocol {
     }
     
     func showSuccess(message: String) {
+        hideLoading()
         coordinator?.navigate(to: .user)
     }
     
     func showError(error: String) {
+        hideLoading()
         DispatchQueue.main.async {
             self.message = error
             self.alertTitle = "Error!"

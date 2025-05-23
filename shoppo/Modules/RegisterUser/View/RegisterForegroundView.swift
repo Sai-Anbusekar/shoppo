@@ -11,7 +11,7 @@ import Foundation
 struct RegisterForegroundView: View {
     
     @ObservedObject var viewModel: RegisterViewModel
-
+    
     
     @State private var selectedDate: Date = Date()
     @State private var showDatePicker = false
@@ -46,7 +46,7 @@ struct RegisterForegroundView: View {
                 Image("registerCamera")
                     .frame(width: 90, height: 90)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                   
+                
                 
                 
                 TextField("name", text: $name)
@@ -54,8 +54,8 @@ struct RegisterForegroundView: View {
                     .padding()
                     .background(Color(.systemGray6))
                     .cornerRadius(25)
-                    
-                    
+                
+                
                 
                 
                 Button(action: {
@@ -64,18 +64,18 @@ struct RegisterForegroundView: View {
                     HStack {
                         
                         TextField("Date of Birth", text: $dob)
-                            
+                        
                             .disabled(true)
-
-                            
+                        
+                        
                         
                     }
                     
                 }
                 .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(25)
-                    
+                .background(Color(.systemGray6))
+                .cornerRadius(25)
+                
                 
                 TextField("Email", text: $email)
                     .keyboardType(.emailAddress)
@@ -106,10 +106,11 @@ struct RegisterForegroundView: View {
                 .background(Color(.systemGray6))
                 .cornerRadius(25)
                 
-
+                
                 
                 
                 Button(action: {
+                    viewModel.showLoading()
                     viewModel.presenter?.registerUser(name: name, email: email, password: password, dob: dob, phone: mobileNumber)
                 }) {
                     Text("Create account")
@@ -162,7 +163,16 @@ struct RegisterForegroundView: View {
                 }
                 .transition(.scale)
             }
-
+            if viewModel.isLoading {
+                Color.black.opacity(0.3).ignoresSafeArea()
+                ProgressView("Loading...")
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                
+            }
+            
+            
         }
     }
     
@@ -180,12 +190,14 @@ extension RegisterForegroundView: RegisterViewProtocol {
         isLoading = false
     }
     func showSuccess(message: String) {
+        viewModel.hideLoading()
         self.successMessage = message
         alertTitle = "Success!"
         alertMessage = message
         viewModel.showAlert.toggle()
     }
     func showError(error: String) {
+        viewModel.hideLoading()
         self.errorMessage = "❌ \(error)"
         alertTitle = "Error!"
         alertMessage = error

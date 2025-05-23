@@ -47,6 +47,7 @@ struct LoginFrontView: View {
             }
             
             Button(action: {
+                viewModel.showLoading()
                 viewModel.presenter?.loginUser(username: viewModel.email, password: viewModel.password)
             }) {
                 Text("Login")

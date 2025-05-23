@@ -19,6 +19,14 @@ struct LoginView: View {
                     
                 }
             }
+            if viewModel.isLoading {
+                  Color.black.opacity(0.3).ignoresSafeArea()
+                  ProgressView("Loading...")
+                      .padding()
+                      .background(Color.white)
+                      .cornerRadius(10)
+                
+              }
         }
     }
 }
