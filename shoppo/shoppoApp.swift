@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct shoppoApp: App {
+    
+    @StateObject var coordinator = AppCoordinator()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            coordinator.viewForCurrentRoute()
+            
         }
     }
 }
